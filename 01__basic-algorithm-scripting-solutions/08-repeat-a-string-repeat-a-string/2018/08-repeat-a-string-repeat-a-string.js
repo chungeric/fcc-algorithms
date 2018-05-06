@@ -1,9 +1,6 @@
 function repeatStringNumTimes(str, num) {
-  let result = "";
-  for (let i = 0; i < num; i++) {
-    result += str;
-  }
-  return result;
+  // padEnd is a new feature in ES8/ES2017
+  return num < 0 ? '' : str.padEnd(str.length * num, str);
 }
 
-repeatStringNumTimes("#F7", -1);
+repeatStringNumTimes("abc", 3);
