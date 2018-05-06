@@ -1,6 +1,8 @@
+// jshint esversion:6
 function chunkArrayInGroups(arr, size) {
-  for (i = 0, outer = []; i < arr.length; i+=size) {
-    outer.push(arr.slice(i, i+size));
+  let outer = [];
+  for (let i = 0; i < arr.length; i+=size) {
+    outer.push(arr.slice(i,i+size));
   }
   return outer;
 }
