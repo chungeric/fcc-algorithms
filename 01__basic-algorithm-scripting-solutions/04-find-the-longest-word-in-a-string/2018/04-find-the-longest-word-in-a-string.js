@@ -1,7 +1,7 @@
+// jshint esversion:6
 function findLongestWord(str) {
-  return str.split(' ').reduce((acc,cur) => {
-    if (cur.length > acc) acc = cur.length;
-    return acc;
+  return str.split(' ').reduce((acc,nxt) => {
+    return nxt.length > acc ? nxt.length : acc;
   }, 0);
 }
 
